@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Notitas</title>
+</head>
+<body>
+    <main id="id_menu" class="menu">
+        <button id="botonMas_id" class="botonMas_class btn btn-primary" type="button" >+</button>
+        <div class="filtro" id="filtro_id_menu">
+            <button id="id_todas">
+                Todas
+            </button >
+            <button id="id_pendientes">
+                Pendientes
+            </button>
+            <button id="id_finalizadas">
+                Finalizadas
+            </button>
+            <button id="id_canceladas">
+                Canceladas
+            </button>
+        </div>
+    </main>
+
+
+    <section id="section_formulario_id" class="section_formulario oculto">
+        
+            <h2 class="h2_nuevaTarea">NUEVA TAREA</h2>
+            <form id="tabla_datos" class="formulario">
+                <label for="tareaTitulo">Título: </label>
+                <input placeholder="Título de la tarea" class="recuadros_formulario" type="text" id="tareaTitulo" name="tareaTitulo" required>
+
+                <label for="tareaDetalle">Detalle: </label>
+                <input placeholder="Aclaraciones" class="recuadros_formulario recuadros_formulario_detalle" type="text" id="tareaDetalle" name="tareaDetalle" required>
+
+                <label for="tareaUrgencia">Urgencia: </label>
+                    <select class="recuadros_formulario" id="tareaUrgencia" name="tareaUrgencia" required>
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+
+
+                <button class="boton_agregarTarea btn btn-outline-dark" id="boton_agregarTarea_id" type="submit" >Agregar Tarea</button>
+
+            </form>
+      
+    </section>
+<div class="divDeSecciones">
+    <section class="section_cards section_todas" id="todas-cards"></section>
+    <section class="section_cards section_pendientes" id="pendientes-cards"></section>
+    <section class="section_cards section_finalizadas" id="finalizadas-cards"></section>
+    <section class="section_cards section_canceladas" id="canceladas-cards"></section>
+</div>
+
+<body>
+  <!-- ... tu contenido actual ... -->
+
+  <!-- Modal de carga -->
+  <div id="modalCarga" class="modal">
+    <div class="modal-contenido">
+      <p>CARGANDO...</p>
+    </div>
+  </div>
+</body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <script  type="module" src="./js/firestoreConfig.js"></script>
+    <script type="module" src="./js/app.js"></script>
+
+    
+</body>
+</html>
