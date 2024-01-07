@@ -1,7 +1,7 @@
 // Importa la función de Firestore para agregar documentos
 import { addDoc, collection, getDocs, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { db } from './firestoreConfig';
-import { auth, currentUser } from './js/firestoreConfig';
+
 
 // Menu ↓
 let botonMas = document.getElementById("botonMas_id");
@@ -44,30 +44,6 @@ let canceladasCards = document.getElementById("canceladas-cards");
 
 
 
-
-
-
-// ...
-
-if (currentUser) {
-  // El usuario está autenticado, verifica si tiene una colección
-  const userId = currentUser.uid;
-
-  checkUserCollectionExists(userId).then((exists) => {
-    if (!exists) {
-      // El usuario no tiene una colección, crearla
-      createUserCollection(userId).then(() => {
-        // Continuar con la inicialización de la aplicación
-        initializeApp();
-      });
-    } else {
-      // El usuario ya tiene una colección, continuar con la inicialización
-      initializeApp();
-    }
-  });
-} else {
-  // No hay usuario autenticado, manejar como desees (posiblemente redirigir al inicio de sesión)
-}
 
 
 
@@ -545,4 +521,6 @@ function actualizarCards() {
   finalizadasCards.innerHTML = "";
   canceladasCards.innerHTML = "";
 }
+
+
 

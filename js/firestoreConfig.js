@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore'
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+// import { getAuth } from 'firebase/auth';
 
 
 
@@ -18,12 +18,8 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-const auth = getAuth();
 
-let currentUser = null;
+export { db };
 
-onAuthStateChanged(auth, (user) => {
-  currentUser = user;
-});
 
-export { db, auth, currentUser };s
+
