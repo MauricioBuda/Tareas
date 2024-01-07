@@ -72,6 +72,7 @@ class Tarjetas {
 
 // Defino que se va a ver en pantalla
 async function cardsEnPantalla(loQueQuieroQueMuestre) {
+    mostrarCarga();
   switch (loQueQuieroQueMuestre) {
       case "Todas":
         mostrarCanceladas.classList.remove("opcionElegidaDelMenu");
@@ -120,6 +121,7 @@ async function cardsEnPantalla(loQueQuieroQueMuestre) {
       default:
         break;
   }
+  ocultarCarga();
 }
 
 
