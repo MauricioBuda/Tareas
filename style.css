@@ -256,7 +256,7 @@ background-color: green;
 }
 
 
-.section_cards div{
+.cards{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,6 +265,7 @@ background-color: green;
   background-color: rgba(0, 0, 255, 0.169);
   max-width: 99%;
   box-sizing: border-box;
+  min-height: 25vh;
 }
 
 .cards *{
@@ -365,8 +366,8 @@ background-color: green;
     margin: 0px 5px 0 2px;
   }
 
-  .section_cards div{
-    height: 10vh;
+  .cards{
+    min-height: 10vh;
   }
 }
 /* FIN SECTION_CARDS*/
@@ -388,8 +389,10 @@ background-color: green;
 }
 
 .modal-contenido {
+  font-size: 4vw;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
 }
+/* FIN MODAL CARGANDO */

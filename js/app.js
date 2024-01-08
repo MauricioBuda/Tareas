@@ -279,6 +279,7 @@ async function agregarTarea(event) {
 
   if (!titulo || !detalle || !urgencia || !fechaCreacion || !ultimaEdicion) {
     alert("No completaste todo");
+    ocultarCarga();
   } else {
     let nuevaCard = new Tarjetas(titulo, detalle, urgencia, fechaCreacion, fechaCierre, ultimaEdicion, estado);
     unaCard.push(nuevaCard);
