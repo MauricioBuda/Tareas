@@ -140,6 +140,7 @@ button {
   align-items: center;
 }
 
+
 .oculto {
   display: none;
 }
@@ -186,6 +187,10 @@ button {
 .recuadros_formulario_detalle{
     padding-bottom: 10vh;
     height: 15vh;
+    max-width: 30vw;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    white-space: wrap; /* Evita el salto de línea */
 }
 
 .boton_agregarTarea{
@@ -227,6 +232,8 @@ background-color: green;
   .recuadros_formulario_detalle{
     padding-bottom: 10vh;
     height: 15vh;
+    max-width: 45vw;
+    width: 45vw;
 }
 
   .boton_agregarTarea{
@@ -307,8 +314,6 @@ background-color: green;
   text-wrap: wrap;
   overflow-wrap: break-word;
   white-space: wrap; /* Evita el salto de línea */
-  overflow-wrap: break-word;
-
 }
 
 .cards h3{ 
@@ -401,7 +406,7 @@ background-color: green;
 
 .cards_modal{
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content:space-evenly;
   flex-direction: column;
   height: 70vh;
@@ -457,6 +462,11 @@ background-color: green;
 .div_modales p{
   margin-top: 1vw;
   font-size: 1.7vw;
+}
+
+.ocultarModal{
+  display: none!important;
+  opacity: 0!important;
 }
 
 
