@@ -366,14 +366,14 @@ function agregarCardAlContenedor(tarea) {
   let botonFinalizarID = `finalizar-${tarea.id}`;
   let botonMasOpcionesID = `opciones-${tarea.id}`;
   let botonEliminarID = `eliminar-${tarea.id}`;
+  let textoCortado = tarea.detalle
 
 
   let maxCaracteres = 50;
   let contenidoDetalle = tarea.detalle;
-  // console.log(contenidoDetalle)
   if (contenidoDetalle.length > maxCaracteres) {
     let detalleTruncado = contenidoDetalle.substring(0,maxCaracteres) + "...";
-    tarea.detalle = detalleTruncado;
+    textoCortado = detalleTruncado;
   }
 
 
@@ -381,7 +381,7 @@ function agregarCardAlContenedor(tarea) {
     let nuevaCardHTML = `
     <div id="${cardID}" class="cards">
       <h3>${tarea.titulo}</h3>
-      <p class="p_detalle">${tarea.detalle}</p>
+      <p class="p_detalle">${textoCortado}</p>
       <p>URGENCIA: <br> ${tarea.urgencia}</p>
       <p>CREACIÓN: <br> ${tarea.fechaCreacion}</p>
       <p>FIN: <br> ${tarea.fechaCierre}</p>
